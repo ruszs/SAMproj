@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import os
-from .env import load_.env
+from dotenv import load_dotenv
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-3%=^+_k3ye(=81x=a8=4u&aqc*1ti9%d-tiknce57bm$vflwr5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['ec2-54-169-133-43.ap-southeast-1.compute.amazonaws.com', 'localhost']
+ALLOWED_HOSTS = ['ec2-54-169-133-43.ap-southeast-1.compute.amazonaws.com', 'localhost','127.0.0.1']
 
 
 # Application definition
